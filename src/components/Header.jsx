@@ -26,7 +26,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="px-5 py-2 bg-blue-500 text-white rounded-md hover:scale-110">Login</a>
+                <Link className="px-5 py-2 bg-blue-500 text-white rounded-md hover:scale-110" to='/login'>Login</Link>
             </div>
         </div>
     );
