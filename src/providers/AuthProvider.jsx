@@ -31,12 +31,14 @@ const AuthProvider = ({ children }) => {
 
     // Login user email and pass
     const login = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
 
 
     // Logout user 
     const logOut = () => {
+        setLoading(true)
         return signOut(auth);
     }
 
