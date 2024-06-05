@@ -17,7 +17,7 @@ const Login = () => {
         const password = form.get('password');
         login(email, password)
             .then(() => {
-                // toast.success('You are successfully logged in')
+                toast.success('You are successfully logged in');
                 e.target.reset();
             })
             .catch(error => {
@@ -69,12 +69,13 @@ const Login = () => {
                             </button>
                         </div>
                         <h2 className="text-lg font-medium text-center">If you don{ap}t have any account <Link to='/register' className="text-orange-500">Register</Link></h2>
+                        <ToastContainer
+                            position="top-center"
+                        ></ToastContainer>
                     </div>
                 </> : <h2 className="text-xl font-semibold text-center">Welcome {user.displayName} your are now logged in</h2>
             }
-            <ToastContainer
-                position="top-center"
-            ></ToastContainer>
+
         </div>
     );
 };
