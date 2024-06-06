@@ -7,6 +7,9 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
+    
+
+    
 
     // User logout
     const userLogout = () => {
@@ -43,10 +46,11 @@ const Header = () => {
             <div className="navbar-end space-x-2">
                 {
                     user ? <>
-                        <img className="w-10 rounded-full object-cover" src={user.photoURL} alt={user.displayName} />
+                        <img className="w-10 rounded-full object-cover" src={user.photoURL} alt={user?.displayName} />
                         <Link onClick={userLogout} className="px-5 py-2 bg-blue-500 text-white rounded-md hover:scale-110" to='/'>Logout</Link>
                     </> :
                         <Link className="px-5 py-2 bg-blue-500 text-white rounded-md hover:scale-110" to='/login'>Login</Link>
+
                 }
             </div>
             <ToastContainer></ToastContainer>

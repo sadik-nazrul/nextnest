@@ -9,6 +9,7 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
     const { userWithGoogle, userWithGithub, ap, createUserEmailPass, user } = useContext(AuthContext);
+    // const nevigate = useNavigate();
 
 
     // Register with email and pass
@@ -43,48 +44,38 @@ const Register = () => {
                 })
                     .then(() => {
                         toast.success('Profile Creation Successfull')
+                        e.target.reset()
                     })
                     .catch(error => {
-                        const code = error.code;
-                        const rePlace = code.replace('auth/', '');
-                        toast.error(rePlace);
+                        toast.error(error.code.replace('auth/', ''))
                     })
             })
 
             .catch(error => {
-                const code = error.code;
-                const rePlace = code.replace('auth/', '');
-                toast.error(rePlace);
+                toast.error(error.code.replace('auth/', ''))
             });
     }
 
     // Google register
     const handleGoogleLogin = () => {
         userWithGoogle()
-            .then(() => {
-                toast.success("Google Authentication Successfull")
-            })
+            .then()
             .catch(error => {
-                const code = error.code;
-                const rePlace = code.replace('auth/', '');
-                toast.error(rePlace);
+                toast.error(error.code)
             })
     }
 
     // Github Register
     const handleGithubLogin = () => {
         userWithGithub()
-            .then(() => {
-                toast.success("Google Authentication Successfull")
-            })
+            .then()
             .catch(error => {
-                const code = error.code;
-                const rePlace = code.replace('auth/', '');
-                toast.error(rePlace);
+                toast.error(error.code)
             })
     }
     return (
         <div className="container mx-auto py-10 flex flex-col items-center">
+
             {
                 !user ? <>
                     <div className="w-2/5 shadow-xl p-10 space-y-4 rounded-xl">
@@ -110,13 +101,16 @@ const Register = () => {
                         </div>
                         <h2 className="text-lg font-medium text-center">If you don{ap}t have any account <Link to='/login' className="text-orange-500">Login</Link></h2>
                     </div>
-                </> : <h2 className="text-xl font-semibold text-center">You are Now logged in</h2>
+                </> : <>
+                <p className="text-xl font-bold">Welcome {user.displayName} to your Account</p>
+                    <ToastContainer
+                        position="top-center"
+                        autoClose={2000}
+                    ></ToastContainer>
+                </>
             }
-            <ToastContainer
-                position="top-center"
-                autoClose={2000}
-            ></ToastContainer>
-        </div>
+
+        </div >
     );
 };
 
