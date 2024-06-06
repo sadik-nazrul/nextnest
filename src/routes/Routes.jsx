@@ -5,6 +5,7 @@ import ErrorPage from "../pages/ErrorPage";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Properties from "../pages/Properties";
+import PropertyDetails from "../pages/PropertyDetails";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
             {
                 path: '/properties',
                 element: <Properties></Properties>
+            },
+            {
+                path: 'property/:title',
+                element: <PropertyDetails></PropertyDetails>,
+                loader: () => fetch('/properties.json')
             }
         ]
     }

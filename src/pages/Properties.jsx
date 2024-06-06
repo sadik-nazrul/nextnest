@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Properties = ({ property }) => {
     const { thumbnail, name, price, status } = property;
     return (
-        <Link to={`/property/${name}`} data-aos="fade-up"
+        <Link to={`property/${name}`} data-aos="fade-up"
             data-aos-duration="2000">
             <div className='border rounded-xl p-4 flex flex-col gap-4 relative'>
                 <p className="px-4 py-2 bg-blue-500 text-white font-medium absolute right-4 rounded-tr-xl">{status}</p>

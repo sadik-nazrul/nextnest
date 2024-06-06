@@ -7,9 +7,6 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    
-
-    
 
     // User logout
     const userLogout = () => {

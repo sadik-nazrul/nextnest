@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import PropTypes from 'prop-types';
 
 const HeroSlider = ({ propertyType, setPropertyType, searchText, setSearchText, onSearch }) => {
-    console.log(typeof onSearch);
+    
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();

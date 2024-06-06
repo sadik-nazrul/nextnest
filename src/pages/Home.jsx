@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
 import 'swiper/css';
+import 'swiper/css/autoplay';
 import { useEffect, useState } from "react";
 import Properties from "./Properties";
 import HeroSlider from "../components/HeroSlider";
