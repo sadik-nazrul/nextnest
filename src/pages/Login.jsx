@@ -4,6 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -54,6 +55,10 @@ const Login = () => {
 
     return (
         <div className="container mx-auto py-10 flex flex-col items-center">
+            <Helmet>
+                <title>
+                    Login Next Nest || See your Chooses Nest Details</title>
+            </Helmet>
 
             {
                 <div className="lg:w-2/5 md:w-3/5 shadow-xl p-10 space-y-4 rounded-xl">

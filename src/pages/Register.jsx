@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 import Loading from "../components/shared/Loading";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
@@ -103,6 +104,10 @@ const Register = () => {
     }
     return (
         <div className="container mx-auto py-10 flex flex-col items-center">
+            <Helmet>
+                <title>
+                    Create Your NextNest Account || See your Chooses Nest Details</title>
+            </Helmet>
 
             {
                 <div className="lg:w-2/5 md:w-2/5 shadow-xl p-10 space-y-4 rounded-xl">

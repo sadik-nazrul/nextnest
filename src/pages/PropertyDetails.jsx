@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import ImagesGallerySlider from "../components/ImagesGallerySlider";
 import { FaChartArea, FaCheckCircle, FaCity } from "react-icons/fa";
 import { FaCalendar, FaEarthAmericas, FaFlagUsa, FaRuler } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 
 const PropertyDetails = () => {
@@ -13,6 +14,10 @@ const PropertyDetails = () => {
     const { area, city, country, state, zip_code } = location;
     return (
         <div className="px-10 py-10">
+            <Helmet>
+                <title>
+                    NextNest Property || {name}</title>
+            </Helmet>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
                 <ImagesGallerySlider images={gallery_images}></ImagesGallerySlider>
                 <div className="space-y-4">

@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Properties from "../pages/Properties";
 import PropertyDetails from "../pages/PropertyDetails";
 import PrivateRouts from "./PrivateRouts";
+import AgentProfile from "../pages/AgentProfile";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,13 @@ export const router = createBrowserRouter([
                     <PropertyDetails></PropertyDetails>
                 </PrivateRouts>,
                 loader: () => fetch('/properties.json')
+            },
+            {
+                path: 'agent/:nameOfAgent',
+                element: <PrivateRouts>
+                    <AgentProfile></AgentProfile>
+                </PrivateRouts>,
+                loader: () => fetch('/agents.json')
             }
         ]
     }

@@ -9,7 +9,8 @@ import 'swiper/css/autoplay';
 import { useEffect, useState } from "react";
 import Properties from "./Properties";
 import HeroSlider from "../components/HeroSlider";
-import Agents from "../components/Agents";
+import Agents from "./Agents";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
     const properties = useLoaderData();
@@ -52,6 +53,11 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    Next Nest || Your trusted commercial place pertner
+                </title>
+            </Helmet>
             <HeroSlider
                 propertyType={propertyType}
                 setPropertyType={setPropertyType}
