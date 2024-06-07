@@ -24,7 +24,7 @@ const Home = () => {
 
     const [agents, setAgents] = useState([]);
     useEffect(() => {
-        fetch('../../public/agents.json')
+        fetch('/agents.json')
             .then(res => res.json())
             .then(data => setAgents(data));
     }, [])
