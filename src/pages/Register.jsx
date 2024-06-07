@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { FaGithub, FaGoogle } from "react-icons/fa6";
+import { useContext, useState } from "react";
+import { FaEyeSlash, FaGithub, FaGoogle, FaRegEye } from "react-icons/fa6";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,6 +13,9 @@ const Register = () => {
     const { userWithGoogle, userWithGithub, ap, createUserEmailPass, user, logOut, loading } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+
+    // Show password state
+    const [showPassword, setShowPasword] = useState(false);
 
     if (loading) {
         return <Loading />
@@ -117,7 +120,14 @@ const Register = () => {
                         <input placeholder="Name" className="outline px-4 py-1 rounded" type="text" name="name" required />
                         <input placeholder="Photo Url" className="outline px-4 py-1 rounded" type="text" name="photo" required />
                         <input placeholder="Email" className="outline px-4 py-1 rounded" type="email" name="email" required />
-                        <input placeholder="Password" className="outline px-4 py-1 rounded" type="password" name="password" required />
+                        <div className="relative">
+                            <input placeholder="Password" className="w-full outline px-4 py-1 rounded" type={showPassword ? "text" : "password"} name="password" required />
+                            <span
+                                className="absolute top-2 right-3 cursor-pointer"
+                                onClick={() => { setShowPasword(!showPassword) }}>
+                                {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaRegEye></FaRegEye>}
+                            </span>
+                        </div>
                         <input className="btn px-5 py-2 bg-orange-500 text-white text-center gap-2 rounded hover:bg-transparent hover:text-orange-400 hover:outline" type="submit" value="Register" />
                     </form>
 

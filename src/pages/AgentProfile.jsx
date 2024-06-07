@@ -7,7 +7,6 @@ const AgentProfile = () => {
     const agents = useLoaderData();
     const { nameOfAgent } = useParams();
     const agent = agents.find(agent => agent.agentName === nameOfAgent);
-    console.log(agent);
     const { agentName, agentImg, serviceAreas, licenseNmbr, taxId, phone, email, linkedIn, twitter } = agent;
     return (
         <div className="container mx-auto p-5 lg:p-0 md:p-0">

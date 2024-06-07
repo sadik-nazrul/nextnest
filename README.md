@@ -1,5 +1,7 @@
 # NextNest a next generation realestate web application
 
+Live site: (https://next-nest-9f2ff.web.app/)
+
 packages:
 
 - [@tailwindCss](https://tailwindcss.com/) uses for Css Styling
@@ -12,3 +14,5 @@ packages:
 - [@Toastify](https://fkhadra.github.io/react-toastify) uses for Scroll animation.
 - [@React-image-gallery](https://www.npmjs.com/package/react-image-gallery) uses for create Slider gallery.
 - [@REACT SPINNERS](https://www.davidhu.io/react-spinners/) uses for create Sppiner.
+- [@REACT Scroll](https://www.npmjs.com/package/react-scroll) uses for Header Scrolling Animation.
+- [@react-helmet-async](https://www.npmjs.com/package/react-helmet-async) uses for Dynamic title for all routs.

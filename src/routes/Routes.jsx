@@ -8,6 +8,7 @@ import Properties from "../pages/Properties";
 import PropertyDetails from "../pages/PropertyDetails";
 import PrivateRouts from "./PrivateRouts";
 import AgentProfile from "../pages/AgentProfile";
+import Contact from "../pages/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: '/properties',
                 element: <Properties></Properties>
+            },
+            {
+                path: 'contact',
+                element: <Contact></Contact>
             },
             {
                 path: 'property/:title',
