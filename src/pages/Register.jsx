@@ -1,15 +1,16 @@
 import { useContext } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa6";
 import { AuthContext } from "../providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
-    const { userWithGoogle, userWithGithub, ap, createUserEmailPass, user } = useContext(AuthContext);
-    // const nevigate = useNavigate();
+    const { userWithGoogle, userWithGithub, ap, createUserEmailPass, user, logOut } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
 
     // Register with email and pass
@@ -42,13 +43,20 @@ const Register = () => {
                     displayName: name,
                     photoURL: photo
                 })
+
                     .then(() => {
-                        toast.success('Profile Creation Successfull')
-                        e.target.reset()
+
+                        // toast.success('Profile Creation Successfull')
+                        e.target.reset();
                     })
                     .catch(error => {
                         toast.error(error.code.replace('auth/', ''))
-                    })
+                    });
+
+                // logout
+                logOut()
+                    .then(() => navigate(location?.state ? location.state : '/login'))
+                    .catch(error => toast.error(error.message));
             })
 
             .catch(error => {
@@ -56,22 +64,33 @@ const Register = () => {
             });
     }
 
+
     // Google register
     const handleGoogleLogin = () => {
         userWithGoogle()
-            .then()
+            .then(() => {
+                // logout
+                logOut()
+                    .then(() => navigate(location?.state ? location.state : '/login'))
+                    .catch(error => toast.error(error.message));
+            })
             .catch(error => {
                 toast.error(error.code)
-            })
+            });
     }
 
     // Github Register
     const handleGithubLogin = () => {
         userWithGithub()
-            .then()
+            .then(() => {
+                // logout
+                logOut()
+                    .then(() => navigate(location?.state ? location.state : '/login'))
+                    .catch(error => toast.error(error.message));
+            })
             .catch(error => {
                 toast.error(error.code)
-            })
+            });
     }
     return (
         <div className="container mx-auto py-10 flex flex-col items-center">
@@ -102,7 +121,7 @@ const Register = () => {
                         <h2 className="text-lg font-medium text-center">If you don{ap}t have any account <Link to='/login' className="text-orange-500">Login</Link></h2>
                     </div>
                 </> : <>
-                <p className="text-xl font-bold">Welcome {user.displayName} to your Account</p>
+                    <p className="text-xl font-bold">Welcome {user.displayName} to your Account</p>
                     <ToastContainer
                         position="top-center"
                         autoClose={2000}

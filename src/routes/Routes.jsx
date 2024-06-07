@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import Properties from "../pages/Properties";
 import PropertyDetails from "../pages/PropertyDetails";
+import PrivateRouts from "./PrivateRouts";
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: ()=> fetch('/properties.json')
+                loader: () => fetch('/properties.json')
             },
             {
                 path: '/login',
@@ -32,7 +33,9 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'property/:title',
-                element: <PropertyDetails></PropertyDetails>,
+                element: <PrivateRouts>
+                    <PropertyDetails></PropertyDetails>
+                </PrivateRouts>,
                 loader: () => fetch('/properties.json')
             }
         ]

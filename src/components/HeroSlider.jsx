@@ -16,10 +16,29 @@ const HeroSlider = ({ propertyType, setPropertyType, searchText, setSearchText, 
 
     return (
         <div className='relative'>
-            <div className='flex flex-col justify-center items-center z-10 absolute top-[40%] w-full'>
+            
+            <Swiper
+                spaceBetween={30}
+                effect={'fade'}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                modules={[EffectFade, Autoplay, Pagination]}
+                className='h-[calc(100vh-68px)]'
+            >
+                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-05-1170x785.jpg')] bg-cover bg-center">
+                </SwiperSlide>
+                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/office-03-1170x785.jpg')] bg-cover bg-center">
+                </SwiperSlide>
+                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-01-1170x785.jpg')] bg-cover bg-center">
+                </SwiperSlide>
+                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/office-02-1170x785.jpg')] bg-cover bg-center">
+                </SwiperSlide>
+            </Swiper>
+            <div className='flex flex-col justify-center items-center z-10 absolute lg:top-[40%] top-[30%] w-full'>
                 <div className='p-5 bg-white w-3/4 text-center rounded-xl shadow-lg'>
                     <h2 className='text-2xl font-bold text-blue-500'>Transform Your Business with Prime Commercial Real Estate</h2>
-                    <p>Explore premier properties and seize opportunities tailored to your needs. Your ideal space awaits—lets make it yours.</p>
                     <form onSubmit={handleSearchSubmit} className='flex flex-col sm:flex-row gap-4 mt-4'>
                         <select 
                             value={propertyType}
@@ -43,25 +62,6 @@ const HeroSlider = ({ propertyType, setPropertyType, searchText, setSearchText, 
                     </form>
                 </div>
             </div>
-            <Swiper
-                spaceBetween={30}
-                effect={'fade'}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                modules={[EffectFade, Autoplay, Pagination]}
-                className='h-[calc(100vh-68px)]'
-            >
-                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-05-1170x785.jpg')] bg-cover bg-center">
-                </SwiperSlide>
-                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/office-03-1170x785.jpg')] bg-cover bg-center">
-                </SwiperSlide>
-                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-01-1170x785.jpg')] bg-cover bg-center">
-                </SwiperSlide>
-                <SwiperSlide className="bg-[url('https://demo28.houzez.co/wp-content/uploads/2020/04/office-02-1170x785.jpg')] bg-cover bg-center">
-                </SwiperSlide>
-            </Swiper>
         </div>
     );
 };

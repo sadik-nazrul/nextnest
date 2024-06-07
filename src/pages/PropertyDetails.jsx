@@ -7,15 +7,15 @@ import { FaCalendar, FaEarthAmericas, FaFlagUsa, FaRuler } from "react-icons/fa6
 const PropertyDetails = () => {
     const properties = useLoaderData();
     const { title } = useParams();
+    console.log(properties);
     const property = properties.find(property => property.name === title);
-    console.log(property);
     const { details, features, gallery_images, location, name, price, status } = property;
     const { size, units, year_of_build } = details;
     const { area, city, country, state, zip_code } = location;
     return (
         <div className="px-10 py-10">
-            <div className="grid grid-cols-2 gap-5">
-                <ImagesGallerySlider images={gallery_images} name={name}></ImagesGallerySlider>
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
+                <ImagesGallerySlider images={gallery_images}></ImagesGallerySlider>
                 <div className="space-y-4">
                     <div>
                         <h2 className="text-xl font-semibold">{name}</h2>
@@ -45,11 +45,11 @@ const PropertyDetails = () => {
 
                     <div className="space-y-2">
                         <h2 className="text-lg font-medium underline">Location</h2>
-                        <div className="flex justify-between border">
-                            <p className="flex items-center gap-2 border-r p-2"><FaCity></FaCity> <span>{city}</span></p>
-                            <p className="flex items-center gap-2 border-r p-2"><FaChartArea></FaChartArea> <span>{area}</span></p>
-                            <p className="flex items-center gap-2 border-r p-2"><FaEarthAmericas></FaEarthAmericas> <span>{country}</span></p>
-                            <p className="flex items-center gap-2 border-r p-2"><FaFlagUsa></FaFlagUsa> <span>{state}</span></p>
+                        <div className="flex justify-between border flex-wrap lg:flex-nowrap">
+                            <p className="flex items-center gap-2 lg:border-r p-2"><FaCity></FaCity> <span>{city}</span></p>
+                            <p className="flex items-center gap-2 lg:border-r p-2"><FaChartArea></FaChartArea> <span>{area}</span></p>
+                            <p className="flex items-center gap-2 lg:border-r p-2"><FaEarthAmericas></FaEarthAmericas> <span>{country}</span></p>
+                            <p className="flex items-center gap-2 lg:border-r p-2"><FaFlagUsa></FaFlagUsa> <span>{state}</span></p>
                             <p className="flex items-center gap-2 p-2"><span className=" text-base font-medium">Zip code:</span> <span>{zip_code}</span></p>
                         </div>
 

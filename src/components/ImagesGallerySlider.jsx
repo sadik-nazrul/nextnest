@@ -1,38 +1,24 @@
 import PropTypes from 'prop-types';
-import { Autoplay, EffectFlip } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Swiper Css
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-flip';
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 
-const ImagesGallerySlider = ({ images, name }) => {
+const ImagesGallerySlider = ({ images }) => {
+    const galleryImages = images.map(image => ({
+        original: image,
+        thumbnail: image,
+    }));
 
     return (
-        <div>
-            <Swiper
-                effect={'flip'}
-                autoplay={{
-                    delay: 2000,
-                    disableOnInteraction: false,
-                }}
-                modules={[Autoplay, EffectFlip]}
-                className='w-full'
-            >
-                {
-                    images.map((image, indx) =>
-                        <SwiperSlide key={indx}>
-                            <img className='w-full rounded-xl object-cover cursor-pointer' src={image} alt={name} />
-                        </SwiperSlide>
-                    )
-                }
-            </Swiper>
-        </div>
+        <ImageGallery items={galleryImages}
+            showFullscreenButton={false}
+            showNav={false}
+            autoPlay={true}
+            showPlayButton={false}
+        />
     );
 };
 ImagesGallerySlider.propTypes = {
-    images: PropTypes.array,
-    name: PropTypes.string
+    images: PropTypes.array
 }
 export default ImagesGallerySlider;

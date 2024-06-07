@@ -16,7 +16,7 @@ const Header = () => {
                 const code = error.code;
                 const rePlace = code.replace('auth/', '');
                 toast.error(rePlace);
-            })
+            });
     }
     const navLinks = <>
         <li><NavLink to='/'>Home</NavLink></li>
