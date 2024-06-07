@@ -26,7 +26,7 @@
     {
       "id": 2,
       "name": "Downtown Office Complex",
-      "thumbnail": "https://i.ibb.co/7KzsLMv/2.jpg",
+      "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/industrial-06-592x444.jpg",
       "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-06-1170x785.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-05-1170x785.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-04-1170x785.jpg"],
       "price": "$5,000,000",
       "status": "Rent",
@@ -50,7 +50,7 @@
     {
       "id": 3,
       "name": "Industrial Warehouse Complex",
-      "thumbnail": "https://i.ibb.co/85WMJqY/3.jpg",
+      "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-02-592x444.jpg",
       "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
       "price": "$3,750,000",
       "status": "Sale",
@@ -74,7 +74,7 @@
     {
       "id": 4,
       "name": "Retail Space on Hollywood Boulevard",
-      "thumbnail": "https://i.ibb.co/1bRbBfd/4.jpg",
+      "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/industrial-05-592x444.jpg",
       "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
       "price": "$1,200,000",
       "status": "Rent",
@@ -98,7 +98,7 @@
     {
       "id": 5,
       "name": "Medical Office Building",
-      "thumbnail": "https://i.ibb.co/dLKPrXz/5.jpg",
+      "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-01-592x444.jpg",
       "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
       "price": "$4,500,000",
       "status": "Sale",
@@ -122,7 +122,7 @@
     {
       "id": 6,
       "name": "Restaurant Space in Little Tokyo",
-      "thumbnail": "https://i.ibb.co/sKQgfsF/6.jpg",
+      "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/industrial-01-592x444.jpg",
       "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
       "price": "$800,000",
       "status": "Rent",
@@ -146,7 +146,7 @@
     {
         "id": 7,
         "name": "Office Building in Financial District",
-        "thumbnail": "https://i.ibb.co/JrLMksw/7.jpg",
+        "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-03-592x444.jpg",
         "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
         "price": "$10,000,000",
         "status": "Sale",
@@ -170,7 +170,7 @@
       {
         "id": 8,
         "name": "Shopping Mall in Downtown Chicago",
-        "thumbnail": "https://i.ibb.co/GJL2LWH/8.jpg",
+        "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-04-592x444.jpg",
         "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
         "price": "$25,000,000",
         "status": "Rent",
@@ -194,7 +194,7 @@
       {
         "id": 9,
         "name": "Luxury Hotel in Miami Beach",
-        "thumbnail": "https://i.ibb.co/n144j1k/9.jpg",
+        "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/industrial-06-592x444.jpg",
         "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
         "price": "$50,000,000",
         "status": "Sale",
@@ -218,7 +218,7 @@
       {
         "id": 10,
         "name": "Office Tower in Midtown Manhattan",
-        "thumbnail": "https://i.ibb.co/PzyhWNJ/10.jpg",
+        "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/industrial-05-592x444.jpg",
         "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
         "price": "$75,000,000",
         "status": "Rent",
@@ -242,7 +242,7 @@
       {
         "id": 11,
         "name": "Warehouse Distribution Center",
-        "thumbnail": "https://i.ibb.co/L5gr6dr/11.jpg",
+        "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-02-592x444.jpg",
         "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
         "price": "$15,000,000",
         "status": "Sale",
@@ -266,7 +266,7 @@
       {
         "id": 12,
         "name": "Tech Campus in Silicon Valley",
-        "thumbnail": "https://i.ibb.co/0fy0bnK/12.jpg",
+        "thumbnail": "https://demo28.houzez.co/wp-content/uploads/2020/04/multifamily-03-592x444.jpg",
         "gallery_images": ["https://demo28.houzez.co/wp-content/uploads/2020/04/office-09-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-08-592x444.jpg", "https://demo28.houzez.co/wp-content/uploads/2020/04/office-07-1170x785.jpg"],
         "price": "$100,000,000",
         "status": "Rent",
