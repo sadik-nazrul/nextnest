@@ -7,7 +7,6 @@ import { FaCalendar, FaEarthAmericas, FaFlagUsa, FaRuler } from "react-icons/fa6
 const PropertyDetails = () => {
     const properties = useLoaderData();
     const { title } = useParams();
-    console.log(properties);
     const property = properties.find(property => property.name === title);
     const { details, features, gallery_images, location, name, price, status } = property;
     const { size, units, year_of_build } = details;

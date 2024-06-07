@@ -10,3 +10,5 @@ packages:
 - [@Swiper](https://swiperjs.com/react) uses for Slider Creation.
 - [@AOS](https://michalsnik.github.io/aos/) uses for Scroll animation.
 - [@Toastify](https://fkhadra.github.io/react-toastify) uses for Scroll animation.
+- [@React-image-gallery](https://www.npmjs.com/package/react-image-gallery) uses for create Slider gallery.
+- [@REACT SPINNERS](https://www.davidhu.io/react-spinners/) uses for create Sppiner.

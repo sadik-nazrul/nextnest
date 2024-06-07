@@ -4,12 +4,17 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from "../components/shared/Loading";
 
 
 const Login = () => {
-    const { userWithGoogle, userWithGithub, ap, login } = useContext(AuthContext);
+    const { userWithGoogle, userWithGithub, ap, login, loading } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+
+    if(loading){
+        return <Loading></Loading>
+    }
 
     // Login with email pass
     const handleLoginEmailPass = e => {
