@@ -105,7 +105,7 @@ const Register = () => {
         <div className="container mx-auto py-10 flex flex-col items-center">
 
             {
-                <div className="w-2/5 shadow-xl p-10 space-y-4 rounded-xl">
+                <div className="lg:w-2/5 md:w-2/5 shadow-xl p-10 space-y-4 rounded-xl">
                     <h2 className="text-xl font-semibold text-center">Create Your Account</h2>
 
                     <form onSubmit={handleRegister} className="flex flex-col gap-4">

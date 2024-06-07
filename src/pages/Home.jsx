@@ -9,6 +9,7 @@ import 'swiper/css/autoplay';
 import { useEffect, useState } from "react";
 import Properties from "./Properties";
 import HeroSlider from "../components/HeroSlider";
+import Agents from "../components/Agents";
 
 const Home = () => {
     const properties = useLoaderData();
@@ -20,17 +21,24 @@ const Home = () => {
         AOS.init();
     }, []);
 
+    const [agents, setAgents] = useState([]);
+    useEffect(() => {
+        fetch('../../public/agents.json')
+            .then(res => res.json())
+            .then(data => setAgents(data));
+    }, [])
+
     const handleSearch = () => {
         const lowerCaseQuery = searchText.toLowerCase();
-        const filtered = properties.filter(property => 
+        const filtered = properties.filter(property =>
             (propertyType ? property.status.toLowerCase() === propertyType.toLowerCase() : true) &&
-            (property.name.toLowerCase().includes(lowerCaseQuery) || 
-             property.price.toLowerCase().includes(lowerCaseQuery))
+            (property.name.toLowerCase().includes(lowerCaseQuery) ||
+                property.price.toLowerCase().includes(lowerCaseQuery))
         );
         setFilteredProperties(filtered);
     };
 
-    const sliderBreakpoint = {
+    const sliderBreakpointForProperties = {
         640: {
             slidesPerView: 1,
         },
@@ -44,16 +52,18 @@ const Home = () => {
 
     return (
         <div>
-            <HeroSlider 
+            <HeroSlider
                 propertyType={propertyType}
                 setPropertyType={setPropertyType}
                 searchText={searchText}
                 setSearchText={setSearchText}
                 onSearch={handleSearch}
             />
-            <div className="container mx-auto">
+            {/* Properties */}
+            <div className="container mx-auto p-5 lg:p-0 md:p-0" data-aos="fade-up">
                 <div className="py-10">
-                    <h2 className="text-2xl pb-5 text-center font-bold animate__animated animate__zoomInDown">Properties</h2>
+                    <h2 className="text-2xl pb-5 text-center font-bold animate__animated animate__zoomInDown font-jost text-blue-500">Discover Our Latest Properties
+                    </h2>
                     <Swiper
                         spaceBetween={20}
                         slidesPerView={1}
@@ -61,7 +71,7 @@ const Home = () => {
                             delay: 3000,
                             disableOnInteraction: false,
                         }}
-                        breakpoints={sliderBreakpoint}
+                        breakpoints={sliderBreakpointForProperties}
                         modules={[Autoplay]}
                     >
                         {
@@ -72,6 +82,25 @@ const Home = () => {
                             )
                         }
                     </Swiper>
+                </div>
+            </div>
+
+
+            {/* Agents */}
+            <div className="container mx-auto p-5 lg:p-0 md:p-0" data-aos="fade-up">
+                <div className="pb-10">
+                    <h2 className="text-2xl pb-5 text-center font-bold animate__animated animate__zoomInDown font-jost text-blue-500">Meet Our Real Estate Agents
+                    </h2>
+                    <div className="grid lg:grid-cols-4 grid-cols-2 gri gap-3">
+                    {
+                        agents.map((agent, indx) =>
+
+                            <Agents key={indx} agent={agent}></Agents>
+
+                        )
+                    }
+                    </div>
+
                 </div>
             </div>
         </div>

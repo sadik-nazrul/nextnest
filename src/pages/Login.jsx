@@ -4,17 +4,12 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from "../components/shared/Loading";
 
 
 const Login = () => {
-    const { userWithGoogle, userWithGithub, ap, login, loading } = useContext(AuthContext);
+    const { userWithGoogle, userWithGithub, ap, login } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-
-    if(loading){
-        return <Loading></Loading>
-    }
 
     // Login with email pass
     const handleLoginEmailPass = e => {
@@ -61,7 +56,7 @@ const Login = () => {
         <div className="container mx-auto py-10 flex flex-col items-center">
 
             {
-                <div className="w-2/5 shadow-xl p-10 space-y-4 rounded-xl">
+                <div className="lg:w-2/5 md:w-3/5 shadow-xl p-10 space-y-4 rounded-xl">
                     <h2 className="text-xl font-semibold text-center">Login Your Account</h2>
 
                     <form onSubmit={handleLoginEmailPass} className="flex flex-col gap-4">
@@ -86,7 +81,7 @@ const Login = () => {
             }
             <ToastContainer
                 position="top-center"
-                autoClose={1000}
+                autoClose={2000}
             ></ToastContainer>
         </div>
     );

@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "agentName": "John Doe",
+        "agentImg": "https://demo28.houzez.co/wp-content/uploads/2016/02/agent-2-300x300.png",
+        "shortAbout": "Experienced agent specializing in residential properties.",
+        "serviceAreas": ["New York", "Brooklyn", "Queens"],
+        "licenseNmbr": "NY1234567",
+        "taxId": "12-3456789",
+        "phone": "555-1234",
+        "email": "john.doe@example.com",
+        "linkedIn": "https://linkedin.com/in/johndoe",
+        "twitter": "https://twitter.com/johndoe"
+    },
+    {
+        "id": 2,
+        "agentName": "Jane Smith",
+        "agentImg": "https://demo28.houzez.co/wp-content/uploads/2016/02/agent-5-300x300.jpg",
+        "shortAbout": "Dedicated agent with 10 years in commercial real estate.",
+        "serviceAreas": ["Los Angeles", "Santa Monica", "Beverly Hills"],
+        "licenseNmbr": "CA7654321",
+        "taxId": "98-7654321",
+        "phone": "555-5678",
+        "email": "jane.smith@example.com",
+        "linkedIn": "https://linkedin.com/in/janesmith",
+        "twitter": "https://twitter.com/janesmith"
+    },
+    {
+        "id": 3,
+        "agentName": "Carlos Martinez",
+        "agentImg": "https://demo28.houzez.co/wp-content/uploads/2016/02/agent-1-300x300.jpg",
+        "shortAbout": "Bilingual agent specializing in suburban homes.",
+        "serviceAreas": ["Miami", "Fort Lauderdale", "Coral Gables"],
+        "licenseNmbr": "FL3456789",
+        "taxId": "34-5678901",
+        "phone": "555-9101",
+        "email": "carlos.martinez@example.com",
+        "linkedIn": "https://linkedin.com/in/carlosmartinez",
+        "twitter": "https://twitter.com/carlosmartinez"
+    },
+    {
+        "id": 4,
+        "agentName": "Emily Johnson",
+        "agentImg": "https://demo28.houzez.co/wp-content/uploads/2016/02/agent-3-300x300.jpg",
+        "shortAbout": "Specialist in luxury condos and penthouses.",
+        "serviceAreas": ["Chicago", "Evanston", "Oak Park"],
+        "licenseNmbr": "IL2345678",
+        "taxId": "56-7890123",
+        "phone": "555-1122",
+        "email": "emily.johnson@example.com",
+        "linkedIn": "https://linkedin.com/in/emilyjohnson",
+        "twitter": "https://twitter.com/emilyjohnson"
+    }
+]
